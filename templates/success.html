@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block title %}
+    transactions
+{% endblock %}
+{% block body %}
+<div class="row" style="margin: 20px;">
+  <div class="col-lg-12" style="text-align:center; background-color:#8E44AD; color: white">
+    <h1> TRANSACTION MADE SUCCESSFULLY </h1>
+  </div>
+</div>
+
+<div class="row" style="margin: 20px;">
+  <div class="col-lg-12" style="text-align:center; background-color:#8E44AD; color: white">
+    <h2> -----DETAILS----- </h2>
+    <h3> SENDER: {{ sender }} </h3>
+    <h3> RECEIVER: {{ receiver }} </h3>
+    <h3> CREDIT AMOUNT : {{ credit }} </h3>
+  </div>
+</div>
+
+{% endblock %}

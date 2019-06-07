@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    USERS
+{% endblock %}
+
+{% block body %}
+    <div class="row" style="margin: 70px;">
+      <div class="col-lg-12" style="text-align:center; background-color:#8E44AD; color: white">
+        <h1> USERS LIST </h1>
+      </div>
+    </div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col"> ID </th>
+          <th scope="col"> NAME </th>
+          <th scope="col"> EMAIL ID </th>
+          <th scope="col"> CREDIT </th>
+          <th scope="col"> VIEW </th>
+        </tr>
+        <tbody>
+          {% for user in users %}
+        <tr>
+          <th> {{ user.id}}</th>
+          <th> {{ user.name }}</th>
+          <th> {{ user.email }} </th>
+          <th> {{ user.credit }}</th>
+          <th>
+            <form action={{ url_for('profile')}} method="post">
+                <button type="submit" name="id" class="btn btn-primary" value={{user.id}}> view </button>
+            </form>
+          </th>
+        </tr>
+          {% endfor %}
+      </tbody>
+      </table>
+{% endblock %}

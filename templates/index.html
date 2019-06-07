@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %}
+     Home Page
+{% endblock %}
+
+{% block body %}
+    <div class="row">
+      <div class="col-lg-12" style="text-align:center; background-color:rgb(42, 75, 124); color: white">
+        <h1> CREDIT MANAGEMENT SYSTEM </h1>
+      </div>
+   </div>
+   <div class="row">
+     <div class="col-lg-12" style="text-align:center">
+       <img src="static/logo.png">
+     </div>
+  </div>
+   <div class="row" style="text-align:center;">
+     <button  type="button" onclick="window.location.href='{{url_for('users')}}';" class="btn btn-primary" style="width: 500px; position: absolute; top: 50%; right: 50%;"> USERS </button>
+   </div>
+
+   <div class="row" style="text-align:center;">
+     <button  type="button" onclick="window.location.href='{{url_for('transactions_list')}}';" class="btn btn-primary" style="width: 500px; position: absolute; top: 50%;"> TRANSACTIONS </button>
+   </div>
+{% endblock %}

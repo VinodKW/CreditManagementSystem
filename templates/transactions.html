@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+{% block title %}
+    TRANSACTIONS
+{% endblock %}
+{% block body %}
+<div class="row" style="margin: 20px;">
+  <div class="col-lg-12" style="text-align:center; background-color:#8E44AD; color: white">
+    <h1> TRANSACTIONS LIST </h1>
+  </div>
+</div>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col"> ID </th>
+      <th scope="col"> SENDER </th>
+      <th scope="col"> RECEIVER </th>
+      <th scope="col"> CREDIT AMOUNT </th>
+    </tr>
+    <tbody>
+      {% for transaction in list%}
+    <tr>
+      <th> {{ transaction.id}}</th>
+      <th> {{ transaction.sender }}</th>
+      <th> {{ transaction.receiver }} </th>
+      <th> {{ transaction.creditamount }}</th>
+    </tr>
+      {% endfor %}
+  </tbody>
+  </table>
+{% endblock %}
